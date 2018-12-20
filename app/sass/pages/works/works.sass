@@ -1,0 +1,67 @@
+.works
+  &-page
+    background: url('../img/background/work-page.png') no-repeat
+    background-size: 100% 100%
+    padding-bottom: 110px   
+  &__list
+    +flex-justify-align-flow(space-around, center, row wrap)
+    &-item
+      +flex-justify-align-flow(center, center, column nowrap)
+      margin-bottom: 20px
+      &:nth-child(n+5)
+        display: none
+      @media screen and (min-width: 900px)
+        &:nth-child(n+5)
+          display: flex
+      transition: 0.4s
+
+    &-img
+      background-size: 100% 100%
+      background-position: center
+      padding: 100px 130px
+      @each $works-img in lawn, lights, waterfall, forest, mountain, tree, river
+        &--#{$works-img}
+          background: url('../img/works/gallery/#{$works-img}.png')
+      &-block
+        position: relative
+        &:hover
+          .works__list-img--hover
+            z-index: 2
+            opacity: 0.7
+      &--hover
+        position: absolute
+        top: 0
+        width: 100%
+        height: 100%
+        bottom: 200px
+        @extend %flex-center
+        z-index: 0
+        background-color: #3d4d29
+        opacity: 0
+        transition: 0.4s
+    &-text-block
+      padding-top: 20px
+      padding-bottom: 20px
+      width: 100%
+      +flex-justify-align(center, center)
+      position: relative
+      background: #fff
+      &--before
+        &:before
+          content: ''
+          z-index: 3
+          display: block
+          position: absolute
+          top: -15px
+          width: 30px
+          height: 30px
+          transform: rotate(45deg)
+          background: #fff
+    &-link
+      &--hover
+        display: block
+      &-img--hover
+        padding: 25px
+        background: url('../img/works/2-layers.png') no-repeat       
+        background-size: 100% 100%
+        background-position: center

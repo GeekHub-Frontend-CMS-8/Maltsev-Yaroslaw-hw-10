@@ -1,0 +1,17 @@
+.load-more
+  display: block
+  padding: 10px 15px
+  background: transparent
+  border: 1px solid #f5c149
+  color: #fff
+  font-size: 20px
+  font-weight: 500
+  text-transform: uppercase
+  transition: 0.4s
+  @media screen and (min-width: 900px)
+    display: none
+  &:hover
+    background: #f5c149    
+  &__container
+    @extend %flex-center
+    width: 100%

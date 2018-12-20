@@ -1,0 +1,32 @@
+$info-background: #111111
+
+.header
+  background: transparent
+  position: absolute
+  right: 0
+  left: 0
+  &__container 
+    +flex-align(flex-start)
+  &__menu
+    +flex-align(flex-start)
+  &__logo 
+    +flex-basis(30%)
+    z-index: 3
+    &-text
+      +text-properties(40px, 'Damion', #fff, $main-weight)
+@media (min-width: 600px) 
+  .header 
+    &__logo
+@media (min-width: 990px) 
+  .header 
+    &__menu 
+      +flex-basis(80%)
+      justify-content: space-between
+@media (min-width: 1200px) 
+  .header 
+    &__container 
+      padding: 0
+    &__logo
+      &:hover 
+        transition: .3s
+        opacity: .7

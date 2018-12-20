@@ -1,0 +1,26 @@
+.social-button
+  width: 100%
+  @extend %flex-center
+  &__list
+    +flex-justify-align-flow(space-around, center, row nowrap)
+    &--footer
+      width: 30%
+    &-item
+      +flex-basis(15%)
+      &--footer
+        +flex-basis(25%)
+  &__button
+    display: block
+    &-img
+      background-size: 100% 100%
+      @each $button-img in facebook, twitter, gp, linkedin
+        &--about
+          &--#{$button-img}
+            padding: 16px
+            background: url('../img/about/social-button/#{$button-img}.png') no-repeat
+            background-size: 100% 100%
+        &--footer
+          &--#{$button-img}
+            padding: 30px
+            background: url('../img/contact/#{$button-img}.png') no-repeat
+            background-size: 100% 100%

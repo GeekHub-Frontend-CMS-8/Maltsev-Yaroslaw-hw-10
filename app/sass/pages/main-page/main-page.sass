@@ -1,0 +1,27 @@
+.main-page
+  padding-top: 0
+
+.carousel
+  &-caption
+    margin-bottom: 40px
+    padding: 17px 20px
+    background: rgba(255, 255, 255, 0.3)
+    @media screen and (min-width: 900px)
+      margin-bottom: 200px
+      padding: 34px 40px
+    &__sentence
+      &-begin
+        color: #74c7d5
+        font-size: 35px
+        @media screen and (min-width: 900px)
+          font-size: 50px
+        font-weight: 300
+      &-end--bold
+        color: #74c7d5
+        font-size: 60px
+        @media screen and (min-width: 900px)
+          font-size: 100px
+  &-indicators
+    @extend %flex-center
+  &_text-container
+    +flex-justify-align-flow(center, center, row nowrap)

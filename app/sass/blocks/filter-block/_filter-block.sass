@@ -1,0 +1,42 @@
+.filter-block
+  padding: 20px 20px
+  margin-bottom: 45px
+  +flex-justify-align-flow(flex-start, center, column nowrap)
+  width: 100%
+  border-top: 1px solid #94b963
+  border-bottom: 1px solid #94b963
+  @media screen and (min-width: 800px)
+    flex-flow: row wrap
+  &__name
+    color: #ffffff
+    font-size: 20px
+    font-weight: 700
+    &-container
+      width: 100%
+      +flex-justify-align(center, center)
+      @media screen and (min-width: 800px)
+        width: 30%
+        justify-content: flex-start
+  &__list
+    +flex-justify-align-flow(space-around, center, column nowrap)
+    width: 100%
+    @media screen and (min-width: 450px)
+      flex-flow: row nowrap
+    @media screen and (min-width: 1000px)
+      width: 70%
+    &-container
+      width: 100%
+      +flex-justify-align-flow(flex-end, center, column nowrap)
+      @media screen and (min-width: 800px)
+        width: 70%
+        flex-flow: row nowrap
+    &-text
+      color: #ffffff
+      font-size: 16px
+      font-weight: 700
+    &-item
+      padding: 10px
+      transition: 0.4s
+      &:hover
+        border-radius: 5px
+        background-color: #f5c149

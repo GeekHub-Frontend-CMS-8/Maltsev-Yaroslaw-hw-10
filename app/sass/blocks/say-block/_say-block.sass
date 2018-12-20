@@ -1,0 +1,23 @@
+.say-block
+  &__container
+    +flex-justify(center)
+  &--after
+    padding: 15px 45px 5px 45px
+    +flex-justify-align-flow(center,center, column nowrap)
+    border-radius: 5px
+    &:after
+      content: ''
+      display: block
+      position: relative
+      bottom: -12px
+      background: #a1ca6c
+      width: 15px // 20px / 1.41
+      height: 15px
+      transform: rotate(45deg)
+    &--about
+      background: #a1ca6c
+  &__text
+    color: #ffffff
+    font-size: 25px
+    font-weight: 700
+    text-transform: uppercase
